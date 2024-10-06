@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,6 +29,33 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.slick-prev:before, .slick-next:before {
+  display: block;
+  font-family: 'slick';
+  font-size: 44px;
+  z-index: 1;
+  line-height: 1;
+  opacity: .75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+
+}
+.slick-prev {
+  /* left: 0; */
+  top: 80px;
+}
+
+.slick-next {
+  /* right:23px; */
+  top: 80px;
+}
+
 
 @layer utilities {
   .text-balance {
